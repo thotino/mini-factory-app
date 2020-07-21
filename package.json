@@ -39,7 +39,8 @@
     "denque": "1.4.1",
     "mongoose": "^5.9.22",
     "request": "2.88.2",
-    "restify": "8.5.1"
+    "restify": "8.5.1",
+    "rabbitmq-utils": "git+ssh://git@github.com:thotino/rabbitmq-utils.git"
   },
   "devDependencies": {
     "chai": ">=4.2.0",

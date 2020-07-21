@@ -13,7 +13,7 @@
 //================================================================================
 // dependencies
 //================================================================================
-const restify = require("restify");
+// const restify = require("restify");
 const dataHandlers = require("./lib/handlers");
 // const utils = require("./lib/util");
 //================================================================================
@@ -29,7 +29,7 @@ const dataHandlers = require("./lib/handlers");
 //================================================================================
 // module
 //================================================================================
-const server = restify.createServer({});
+// const server = restify.createServer({});
 
 // server.post("/order/new", [
 //     utils.validateHeaderContentJson,
@@ -41,4 +41,5 @@ const server = restify.createServer({});
 // ]);
 
 // server.listen(1300, console.log("listening to the port 1300..."));
-dataHandlers.handleOrder();
+dataHandlers.handleOrders();
+// dataHandlers.finishOrder();
