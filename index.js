@@ -29,7 +29,9 @@ const dataHandlers = require("./lib/handlers");
 // module
 //================================================================================
 Promise.try(() => {
-  dataHandlers.handleOrders();
-  dataHandlers.finishOrders();
+  return dataHandlers.handleOrders().then((data) => {
+    console.log(data);
+  });
+  // .then(() => {dataHandlers.finishOrders()});
 });
 
