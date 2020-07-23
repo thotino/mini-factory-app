@@ -1,0 +1,23 @@
+# dependencies
+/node_modules/
+/bower_components/
+
+# compiled
+/bin/
+/dist/
+
+# included C++
+/include/
+/src/
+
+# compiled doc
+/doc/**/
+
+# git hooks
+/script/setup/*
+!/script/setup/*.js
+
+# misc
+**.log
+/tmp/
+/package-lock.json

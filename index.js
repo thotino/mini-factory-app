@@ -13,9 +13,8 @@
 //================================================================================
 // dependencies
 //================================================================================
-// const restify = require("restify");
+const Promise = require("bluebird");
 const dataHandlers = require("./lib/handlers");
-// const utils = require("./lib/util");
 //================================================================================
 // config
 //================================================================================
@@ -29,17 +28,8 @@ const dataHandlers = require("./lib/handlers");
 //================================================================================
 // module
 //================================================================================
-// const server = restify.createServer({});
+Promise.try(() => {
+  dataHandlers.handleOrders();
+  dataHandlers.finishOrders();
+});
 
-// server.post("/order/new", [
-//     utils.validateHeaderContentJson,
-//     utils.validateHeaderAcceptJson,
-//     dataHandlers.bodyParser,
-//     utils.validateBodyJson,
-//     dataHandlers.enqueueOrder,
-//     dataHandlers.sendData,
-// ]);
-
-// server.listen(1300, console.log("listening to the port 1300..."));
-dataHandlers.handleOrders();
-// dataHandlers.finishOrder();
